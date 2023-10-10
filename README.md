@@ -8,32 +8,7 @@ Quelques concepts mis en oeuvre:
 * Enums: zone, angle
 * abstraction: Attaque, Etat
 * utilisation des 
-* 
 
-```dot
-digraph "classes" {
-rankdir=BT
-charset="utf-8"
-"aesa.coup.Angle" [color="black", fontcolor="black", label=<{Angle|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.attaque.Attaque" [color="black", fontcolor="black", label=<{Attaque|combattant : Optional[Combattant]<br ALIGN="LEFT"/>nom : str<br ALIGN="LEFT"/>pa : int<br ALIGN="LEFT"/>zone<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.attaque.AttaqueBras" [color="black", fontcolor="black", label=<{AttaqueBras|zone : BRAS<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.attaque.AttaqueJambe" [color="black", fontcolor="black", label=<{AttaqueJambe|zone : JAMBE<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.attaque.AttaqueTete" [color="black", fontcolor="black", label=<{AttaqueTete|zone : TETE<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.combattant.Combattant" [color="black", fontcolor="black", label=<{Combattant|a_joue : bool<br ALIGN="LEFT"/>agilite_base : int<br ALIGN="LEFT"/>agilite_reelle<br ALIGN="LEFT"/>buff : int<br ALIGN="LEFT"/>encombrement_reel<br ALIGN="LEFT"/>encombrement_total : int<br ALIGN="LEFT"/>etats : set<br ALIGN="LEFT"/>force : int<br ALIGN="LEFT"/>initiative<br ALIGN="LEFT"/>nom : str<br ALIGN="LEFT"/>points_action<br ALIGN="LEFT"/>precision : int<br ALIGN="LEFT"/>qj : int<br ALIGN="LEFT"/>rvj<br ALIGN="LEFT"/>sante : float<br ALIGN="LEFT"/>vitesse_base : int<br ALIGN="LEFT"/>vitesse_reelle<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.coup.Coup" [color="black", fontcolor="black", label=<{Coup|angle : int<br ALIGN="LEFT"/>attaquant<br ALIGN="LEFT"/>attaque<br ALIGN="LEFT"/>cible<br ALIGN="LEFT"/>j20 : int<br ALIGN="LEFT"/>|execute(j20, angle: Angle)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"aesa.etat.Etat" [color="black", fontcolor="black", label=<{Etat|ampleur : int<br ALIGN="LEFT"/>nom : NoneType<br ALIGN="LEFT"/>|create(nom, value)<br ALIGN="LEFT"/><I>effet_attaquant</I>(coup: Coup)<br ALIGN="LEFT"/><I>effet_cible</I>(coup: Coup)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"aesa.etat.EtatETO" [color="black", fontcolor="black", label=<{EtatETO|label : str<br ALIGN="LEFT"/>nom : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.test.test_coup1.MyTestCase" [color="black", fontcolor="black", label=<{MyTestCase|<br ALIGN="LEFT"/>|<I>setUp</I>(): None<br ALIGN="LEFT"/>test_coup()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"aesa.test.test_template.MyTestCase" [color="black", fontcolor="black", label=<{MyTestCase|<br ALIGN="LEFT"/>|test_something()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"aesa.partie.Partie" [color="black", fontcolor="black", label=<{Partie|combattants : List[Combattant]<br ALIGN="LEFT"/>nom : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.test.test_prop.PropTestCase" [color="black", fontcolor="black", label=<{PropTestCase|<br ALIGN="LEFT"/>|test_attributs_calcules()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"aesa.attaque.ZoneAttaque" [color="black", fontcolor="black", label=<{ZoneAttaque|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
-"aesa.attaque.AttaqueBras" -> "aesa.attaque.Attaque" [arrowhead="empty", arrowtail="none"];
-"aesa.attaque.AttaqueJambe" -> "aesa.attaque.Attaque" [arrowhead="empty", arrowtail="none"];
-"aesa.attaque.AttaqueTete" -> "aesa.attaque.Attaque" [arrowhead="empty", arrowtail="none"];
-"aesa.etat.EtatETO" -> "aesa.etat.Etat" [arrowhead="empty", arrowtail="none"];
-"aesa.attaque.ZoneAttaque" -> "aesa.attaque.Attaque" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="zone", style="solid"];
-}
 
-```
+![classes](./classes.svg)
 
