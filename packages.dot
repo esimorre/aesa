@@ -1,0 +1,25 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"aesa" [color="black", label=<aesa>, shape="box", style="solid"];
+"aesa.attaque" [color="black", label=<aesa.attaque>, shape="box", style="solid"];
+"aesa.combattant" [color="black", label=<aesa.combattant>, shape="box", style="solid"];
+"aesa.coup" [color="black", label=<aesa.coup>, shape="box", style="solid"];
+"aesa.etat" [color="black", label=<aesa.etat>, shape="box", style="solid"];
+"aesa.main" [color="black", label=<aesa.main>, shape="box", style="solid"];
+"aesa.partie" [color="black", label=<aesa.partie>, shape="box", style="solid"];
+"aesa.test" [color="black", label=<aesa.test>, shape="box", style="solid"];
+"aesa.test.test_coup1" [color="black", label=<aesa.test.test_coup1>, shape="box", style="solid"];
+"aesa.test.test_prop" [color="black", label=<aesa.test.test_prop>, shape="box", style="solid"];
+"aesa.test.test_template" [color="black", label=<aesa.test.test_template>, shape="box", style="solid"];
+"aesa.attaque" -> "aesa.combattant" [arrowhead="open", arrowtail="none"];
+"aesa.coup" -> "aesa.attaque" [arrowhead="open", arrowtail="none"];
+"aesa.coup" -> "aesa.combattant" [arrowhead="open", arrowtail="none"];
+"aesa.etat" -> "aesa.coup" [arrowhead="open", arrowtail="none"];
+"aesa.main" -> "aesa.attaque" [arrowhead="open", arrowtail="none"];
+"aesa.main" -> "aesa.combattant" [arrowhead="open", arrowtail="none"];
+"aesa.main" -> "aesa.coup" [arrowhead="open", arrowtail="none"];
+"aesa.main" -> "aesa.etat" [arrowhead="open", arrowtail="none"];
+"aesa.main" -> "aesa.partie" [arrowhead="open", arrowtail="none"];
+"aesa.partie" -> "aesa.combattant" [arrowhead="open", arrowtail="none"];
+}

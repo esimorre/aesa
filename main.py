@@ -9,5 +9,4 @@ class MyClass:
 if __name__ == '__main__':
     hello()
     a = MyClass(10)
-    b = MyClass("toto", comment="comment    a = MyClass(10)
-1")
+    b = MyClass("toto", comment="comment")
