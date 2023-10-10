@@ -23,7 +23,11 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(gob1_pa , 6, "point d'action par défaut à 6 (TODO: buff NYI)")
 
         gob1.etats.add((EtatETO(20)))
-        gob2.etats.add((EtatETO(10)))
+        #gob2.etats.add((EtatETO(10))) on fait une méthode pour ça
+        gob2.ajoutEtat('ETO', 10)
+
+        with self.assertRaises(RuntimeError):
+            gob1.ajoutEtat('Etat bidon', 40)
 
         p = Partie('test partie 1')
         p.combattants.append(gob1)

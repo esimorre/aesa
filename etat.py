@@ -1,5 +1,3 @@
-from coup import Coup
-
 
 class Etat:
     nom = None
@@ -7,15 +5,15 @@ class Etat:
         self.ampleur = value
 
     @classmethod
-    def create(cls, nom, value):
+    def create(cls, nom : str, value : int | float):
         if nom == 'ETO': return EtatETO(value)
 
-        return None
+        raise RuntimeError("Etat %s non reconnu" % nom)
 
-    def effet_cible(self, coup : Coup):
+    def effet_cible(self, coup):
         pass
 
-    def effet_attaquant(self, coup: Coup):
+    def effet_attaquant(self, coup):
         pass
 
 

@@ -1,3 +1,5 @@
+from etat import Etat
+
 
 class Combattant:
     def __init__(self, nom : str, qj=0): #TODO params valeurs par defaut
@@ -45,3 +47,6 @@ class Combattant:
     @property
     def encombrement_reel(self):
         return self.encombrement_total - self.force / 10
+
+    def ajoutEtat(self, type : str, valeur : int):
+        self.etats.add(Etat.create(type, valeur))
